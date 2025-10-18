@@ -1,0 +1,97 @@
+{
+ "app": "childcare_mis",
+ "charts": [],
+ "content": "[{\"id\":\"gTbVbu1Wg1\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Childcare Home</b>\",\"col\":12}},{\"id\":\"oHFMUrsLkF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Child profile Details\",\"col\":4}},{\"id\":\"7QLSRHxWLV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Child Education Details\",\"col\":4}},{\"id\":\"4WsBp-3JYn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Health Growth monitoring\",\"col\":4}},{\"id\":\"HvV93RATZi\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Care leavers\",\"col\":4}},{\"id\":\"fvkYq2cN8B\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Child Entitlement\",\"col\":4}},{\"id\":\"eUkXMnI9D9\",\"type\":\"paragraph\",\"data\":{\"text\":\"&nbsp;&nbsp;\",\"col\":12}},{\"id\":\"07VQ8mr4Bm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CWC Visits\",\"col\":4}},{\"id\":\"b2HChvn0a5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Staff profile\",\"col\":4}},{\"id\":\"JLGYlYgblL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CCI Profile\",\"col\":4}}]",
+ "creation": "2025-10-18 16:26:48.129304",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "home",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Home",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2025-10-18 18:00:36.508383",
+ "modified_by": "Administrator",
+ "module": "Childcare MIS",
+ "name": "Home",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Child profile Details",
+   "link_to": "Child profile",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Child Education Details",
+   "link_to": "Child Education Details",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "label": "Care leavers",
+   "link_to": "Care leavers",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "CWC Visits",
+   "link_to": "CWC Visits",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "List",
+   "label": "Health Growth monitoring",
+   "link_to": "Health Growth monitoring",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Child Entitlement",
+   "link_to": "Entitlement",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Staff profile",
+   "link_to": "Staff profile",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "CCI Profile",
+   "link_to": "CCI Profile",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Home",
+ "type": "Workspace"
+}

@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "format: CCIENT{###}",
+ "creation": "2025-10-18 17:37:22.681078",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "child_id",
+  "child_name",
+  "gender",
+  "column_break_tqzu",
+  "age",
+  "date",
+  "created_by",
+  "section_break_jwoe",
+  "basline",
+  "change",
+  "entitlement_type",
+  "status",
+  "who_issued",
+  "column_break_meba",
+  "documented_date",
+  "applied_date",
+  "approved_date",
+  "rejected_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "child_id",
+   "fieldtype": "Link",
+   "label": "Child ID",
+   "options": "Child profile",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "child_id.child_name",
+   "fetch_if_empty": 1,
+   "fieldname": "child_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Child Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "child_id.gender",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_tqzu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "child_id.age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "section_break_jwoe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "basline",
+   "fieldtype": "Select",
+   "label": "Basline",
+   "options": "\nCorrection Needed\nYes\nNo"
+  },
+  {
+   "fieldname": "change",
+   "fieldtype": "Select",
+   "label": "Change",
+   "options": "\nNew\nUpdated\nKYC"
+  },
+  {
+   "fieldname": "entitlement_type",
+   "fieldtype": "Link",
+   "label": "Entitlement Type",
+   "options": "Entitlement Type"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDocumentation\nApplied\nApproved\nRejected"
+  },
+  {
+   "fieldname": "who_issued",
+   "fieldtype": "Select",
+   "label": "Who issued the document?",
+   "options": "\nMunicipal Authority\nUIDAI\nHealth Department\nEducation Department\nChild Welfare Board\nNGO\nSchool Administration\nSocial Welfare Department\nPassport Authority\nPDS Authority"
+  },
+  {
+   "fieldname": "column_break_meba",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "documented_date",
+   "fieldtype": "Date",
+   "label": "Documented Date"
+  },
+  {
+   "fieldname": "applied_date",
+   "fieldtype": "Date",
+   "label": "Applied/Submitted date"
+  },
+  {
+   "fieldname": "approved_date",
+   "fieldtype": "Date",
+   "label": "Approved Date"
+  },
+  {
+   "fieldname": "rejected_date",
+   "fieldtype": "Date",
+   "label": "Rejected Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-18 17:37:22.681078",
+ "modified_by": "Administrator",
+ "module": "Childcare MIS",
+ "name": "Entitlement",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

@@ -1,0 +1,266 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SF{cci_short_code}{####}",
+ "creation": "2025-10-18 17:22:48.687204",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "photo",
+  "gender",
+  "date_of_birth",
+  "age",
+  "column_break_rrns",
+  "marital_status",
+  "mobile_number",
+  "email_id",
+  "address",
+  "org_and_cci",
+  "cci_id",
+  "cci_name",
+  "column_break_ezhh",
+  "organization_name",
+  "cci_short_code",
+  "employment",
+  "designation",
+  "department",
+  "employment_type",
+  "column_break_gvfp",
+  "date_of_joining",
+  "experience",
+  "reporting_manager",
+  "documents",
+  "highest_qualification",
+  "certificates_uploaded",
+  "column_break_ievp",
+  "id_proof_type",
+  "id_proof_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Profile photo"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gender",
+   "options": "\nMale\nFemale",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rrns",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "\nSingle\nMarried\nDivorced\nWidowed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mobile Number",
+   "non_negative": 1,
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "org_and_cci",
+   "fieldtype": "Section Break",
+   "label": "Organization & CCI Details"
+  },
+  {
+   "fieldname": "cci_id",
+   "fieldtype": "Data",
+   "label": "CCI ID",
+   "options": "CCI Profile",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "cci_id.name_of_cci",
+   "fetch_if_empty": 1,
+   "fieldname": "cci_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "CCI Name"
+  },
+  {
+   "fieldname": "column_break_ezhh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "cci_id.organizations",
+   "fetch_if_empty": 1,
+   "fieldname": "organization_name",
+   "fieldtype": "Data",
+   "label": "Organization Name"
+  },
+  {
+   "fetch_from": "cci_id.cci_short_code",
+   "fetch_if_empty": 1,
+   "fieldname": "cci_short_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "CCI short code"
+  },
+  {
+   "fieldname": "employment",
+   "fieldtype": "Section Break",
+   "label": "Employment  & Role Details"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Department"
+  },
+  {
+   "fieldname": "employment_type",
+   "fieldtype": "Select",
+   "label": "Employment Type",
+   "options": "\nFull-time\nPart-time\nVolunteer\nContract"
+  },
+  {
+   "fieldname": "column_break_gvfp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Date of Joining"
+  },
+  {
+   "fieldname": "experience",
+   "fieldtype": "Int",
+   "label": "Experience (in Years)"
+  },
+  {
+   "fieldname": "reporting_manager",
+   "fieldtype": "Data",
+   "label": "Reporting Manager"
+  },
+  {
+   "fieldname": "documents",
+   "fieldtype": "Section Break",
+   "label": "Qualification & Documents"
+  },
+  {
+   "fieldname": "highest_qualification",
+   "fieldtype": "Select",
+   "label": "Highest Qualification",
+   "options": "\nSSLC\nHSC\nDiploma\nBachelor's\nMaster's\nDoctorate",
+   "reqd": 1
+  },
+  {
+   "description": "Educational or experience proof",
+   "fieldname": "certificates_uploaded",
+   "fieldtype": "Attach",
+   "label": "Certificates Uploaded"
+  },
+  {
+   "fieldname": "column_break_ievp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "id_proof_type",
+   "fieldtype": "Select",
+   "label": "ID Proof Type",
+   "options": "\nAadhaar\nPAN\nVoter ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "id_proof_number",
+   "fieldtype": "Data",
+   "label": "ID Proof Number",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-18 17:22:48.687204",
+ "modified_by": "Administrator",
+ "module": "Childcare MIS",
+ "name": "Staff profile",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "full_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

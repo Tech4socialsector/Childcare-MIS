@@ -1,0 +1,169 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-10-18 17:27:01.482050",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_trzr",
+  "date",
+  "is_under_renewal",
+  "application_status",
+  "applied_date",
+  "acknowledgement_number",
+  "attach_acknowledgement_document",
+  "have_you_applied_for_fit_facility",
+  "no_of_childern_during_renewal",
+  "visites_during_renewal",
+  "column_break_zbax",
+  "number_of_dcpu_visits",
+  "number_of_cwc_visits",
+  "name_of_the_act_under",
+  "name_of_ccis_licensed_under_any_state_specific_acts",
+  "license_valid_from_date",
+  "license_valid_end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_trzr",
+   "fieldtype": "Section Break",
+   "label": "License Details"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "is_under_renewal",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Is that CCI license is under renewal?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "default": "Applied",
+   "depends_on": "eval:doc.is_under_renewal==\"Yes\";",
+   "fieldname": "application_status",
+   "fieldtype": "Select",
+   "label": "Application Status",
+   "options": "\nApplied\nIn Progress\nApproved\nOn Hold\nRejected"
+  },
+  {
+   "depends_on": "eval:doc.is_under_renewal==\"Yes\";",
+   "fieldname": "applied_date",
+   "fieldtype": "Date",
+   "label": "When was the application made for renewal ?",
+   "mandatory_depends_on": "eval:doc.is_under_renewal==\"Yes\";"
+  },
+  {
+   "depends_on": "eval:doc.is_under_renewal==\"Yes\";",
+   "fieldname": "acknowledgement_number",
+   "fieldtype": "Data",
+   "label": "Acknowledgement Number",
+   "mandatory_depends_on": "eval:doc.is_under_renewal==\"Yes\";"
+  },
+  {
+   "depends_on": "eval:doc.is_under_renewal==\"Yes\";",
+   "fieldname": "attach_acknowledgement_document",
+   "fieldtype": "Attach",
+   "label": "Attach Acknowledgement document"
+  },
+  {
+   "depends_on": "eval:doc.is_under_renewal==\"Yes\";",
+   "fieldname": "have_you_applied_for_fit_facility",
+   "fieldtype": "Select",
+   "label": "Have you applied for fit facility?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.is_under_renewal==\"Yes\";",
+   "fieldname": "no_of_childern_during_renewal",
+   "fieldtype": "Int",
+   "label": "How many children have come from the CWC order during the renewal period?"
+  },
+  {
+   "depends_on": "eval:doc.is_under_renewal==\"Yes\";",
+   "fieldname": "visites_during_renewal",
+   "fieldtype": "Select",
+   "label": "How many visits have been done during the renewal period by the DCPU, CWC, any other statutory body?",
+   "mandatory_depends_on": "eval:doc.is_under_renewal==\"Yes\";",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_zbax",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.visites_during_renewal==\"Yes\";",
+   "fieldname": "number_of_dcpu_visits",
+   "fieldtype": "Int",
+   "label": "Number of DCPU Visits"
+  },
+  {
+   "depends_on": "eval:doc.visites_during_renewal==\"Yes\";",
+   "fieldname": "number_of_cwc_visits",
+   "fieldtype": "Int",
+   "label": "Number of CWC Visits"
+  },
+  {
+   "depends_on": "eval:doc.is_under_renewal==\"No\";",
+   "fieldname": "name_of_the_act_under",
+   "fieldtype": "Link",
+   "label": "Name of the Act under which licensed",
+   "mandatory_depends_on": "eval:doc.is_under_renewal==\"No\";",
+   "options": "Registration Under Act"
+  },
+  {
+   "depends_on": "eval:doc.is_under_renewal==\"No\";",
+   "description": "e.g. West Bengal children and women institutions licensing Act 1956",
+   "fieldname": "name_of_ccis_licensed_under_any_state_specific_acts",
+   "fieldtype": "Data",
+   "label": "Name of CCIs licensed under any State specific Acts"
+  },
+  {
+   "depends_on": "eval:doc.is_under_renewal==\"No\";",
+   "fieldname": "license_valid_from_date",
+   "fieldtype": "Date",
+   "label": "License valid from Date",
+   "mandatory_depends_on": "eval:doc.is_under_renewal==\"No\";"
+  },
+  {
+   "depends_on": "eval:doc.is_under_renewal==\"No\";",
+   "fieldname": "license_valid_end_date",
+   "fieldtype": "Date",
+   "label": "License valid end Date",
+   "mandatory_depends_on": "eval:doc.is_under_renewal==\"No\";"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [
+  {
+   "link_doctype": "Staff profile",
+   "link_fieldname": "cci_id"
+  }
+ ],
+ "modified": "2025-10-18 17:27:01.482050",
+ "modified_by": "Administrator",
+ "module": "Childcare MIS Child",
+ "name": "License Details Child",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

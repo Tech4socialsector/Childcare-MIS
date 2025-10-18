@@ -1,0 +1,81 @@
+{
+ "app": "childcare_mis",
+ "charts": [],
+ "content": "[{\"id\":\"Na0LS1hp80\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Master Files</b></span>\",\"col\":12}},{\"id\":\"TKAbOh7f07\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Organization\",\"col\":3}},{\"id\":\"8BMlbcU5lz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Years\",\"col\":3}},{\"id\":\"IY5N6Nb-ak\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Districts\",\"col\":3}},{\"id\":\"Oq36qfymHY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State List\",\"col\":3}},{\"id\":\"tepNradZoN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Academic Year\",\"col\":3}},{\"id\":\"A3SXxPFBl_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Location\",\"col\":3}}]",
+ "creation": "2025-10-18 18:02:03.487665",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "setting-gear",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Master",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2025-10-18 18:07:06.859037",
+ "modified_by": "Administrator",
+ "module": "Childcare MIS",
+ "name": "Master",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 24.0,
+ "shortcuts": [
+  {
+   "color": "Pink",
+   "doc_view": "List",
+   "label": "Organization",
+   "link_to": "Organization",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Years",
+   "link_to": "Years",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Districts",
+   "link_to": "District",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "State List",
+   "link_to": "State",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Academic Year",
+   "link_to": "Academic Year",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "label": "Location",
+   "link_to": "Location",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Master",
+ "type": "Workspace"
+}

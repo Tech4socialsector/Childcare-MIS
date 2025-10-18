@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-18 17:16:56.001323",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "year",
+  "month",
+  "weight_kg",
+  "height_cm",
+  "column_break_qhta",
+  "bmi",
+  "bmi_category",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Year",
+   "options": "Years"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Month",
+   "options": "\nJanuary\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+  },
+  {
+   "fieldname": "weight_kg",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Weight (kg)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "height_cm",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Height (cm)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qhta",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "BMI",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "bmi_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "BMI Category",
+   "options": "\nUnderweight\nNormal\nOverweight\nObese",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-10-18 17:16:56.001323",
+ "modified_by": "Administrator",
+ "module": "Childcare MIS Child",
+ "name": "Monthly BMI Monitoring",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
