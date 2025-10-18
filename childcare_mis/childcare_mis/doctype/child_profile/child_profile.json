@@ -1,0 +1,313 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{organization_short_code}{cci_short_code}{###}",
+ "creation": "2025-10-18 17:35:05.458860",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "child_name",
+  "admission_number",
+  "what_is_the_childs_parental_status",
+  "no_father_or_no_mother",
+  "date_of_birth",
+  "gender",
+  "age",
+  "religion",
+  "community",
+  "address",
+  "column_break_waju",
+  "child_status",
+  "parent_name",
+  "date_of_admission",
+  "child_profile_picture",
+  "guardian_contact_number",
+  "does_child_have_family_history",
+  "child_tenure",
+  "section_break_jxfu",
+  "state",
+  "district",
+  "location",
+  "column_break_tfbf",
+  "location_short_code",
+  "cci_id",
+  "cci_name",
+  "organization",
+  "organization_short_code",
+  "cci_short_code",
+  "child_family_details_section",
+  "family_members_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "child_name",
+   "fieldtype": "Data",
+   "label": "Child Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "admission_number",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Admission Number"
+  },
+  {
+   "fieldname": "what_is_the_childs_parental_status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Parental Status",
+   "options": "\nNon Orphan\nSemi Orphan\nOrphan\nCO\nOther"
+  },
+  {
+   "fieldname": "no_father_or_no_mother",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "No Father or No Mother",
+   "options": "\nNo Father\nNo Mother"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Child Date of Birth"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gender",
+   "options": "\nMale\nFemale\nOthers"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Age",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "religion",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Religion ",
+   "options": "\nHindu\nChristian\nMuslim\nL.C.Mukkuva\nOthers"
+  },
+  {
+   "fieldname": "community",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Community",
+   "options": "\nST\nSC\nMBC\nBC\nOBC\nFC\nOC\nOEC\nDNC\nDNT"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_waju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "child_status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Child Status",
+   "options": "\nActive\nInactive",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.what_is_the_childs_parental_status==\"Single Parent\";",
+   "fieldname": "parent_name",
+   "fieldtype": "Data",
+   "label": "Parent Name",
+   "mandatory_depends_on": "eval:doc.what_is_the_childs_parental_status==\"Single Parent\";"
+  },
+  {
+   "fieldname": "date_of_admission",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date of Admission",
+   "read_only": 1
+  },
+  {
+   "fieldname": "child_profile_picture",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Child profile picture"
+  },
+  {
+   "fieldname": "guardian_contact_number",
+   "fieldtype": "Data",
+   "label": "Guardian Contact Number"
+  },
+  {
+   "fieldname": "does_child_have_family_history",
+   "fieldtype": "Select",
+   "label": "Does the child have any known family history ?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "child_tenure",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Child Tenure"
+  },
+  {
+   "fieldname": "section_break_jxfu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location"
+  },
+  {
+   "fieldname": "column_break_tfbf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location_short_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Location short code"
+  },
+  {
+   "fieldname": "cci_id",
+   "fieldtype": "Link",
+   "label": "CCI ID",
+   "options": "CCI Profile"
+  },
+  {
+   "fetch_from": "cci_id.name_of_cci",
+   "fetch_if_empty": 1,
+   "fieldname": "cci_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "CCI Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "cci_id.organizations",
+   "fetch_if_empty": 1,
+   "fieldname": "organization",
+   "fieldtype": "Data",
+   "label": "Organization name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "cci_name.organization_name_code",
+   "fetch_if_empty": 1,
+   "fieldname": "organization_short_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Organization short code"
+  },
+  {
+   "fieldname": "cci_short_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "CCI short code"
+  },
+  {
+   "depends_on": "eval:doc.does_child_have_family_history==\"Yes\"||doc.what_is_the_childs_parental_status==\"Both Parents Alive\";",
+   "fieldname": "child_family_details_section",
+   "fieldtype": "Section Break",
+   "label": "Child family details"
+  },
+  {
+   "fieldname": "family_members_details",
+   "fieldtype": "Table",
+   "label": "Family members details",
+   "options": "Child Family Details"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Child Education Details",
+   "link_fieldname": "child_id"
+  },
+  {
+   "link_doctype": "Health Growth monitoring",
+   "link_fieldname": "child_id"
+  },
+  {
+   "link_doctype": "Care leavers",
+   "link_fieldname": "child_id"
+  },
+  {
+   "link_doctype": "Entitlement",
+   "link_fieldname": "child_id"
+  }
+ ],
+ "modified": "2025-10-18 17:51:49.639184",
+ "modified_by": "Administrator",
+ "module": "Childcare MIS",
+ "name": "Child profile",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "child_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

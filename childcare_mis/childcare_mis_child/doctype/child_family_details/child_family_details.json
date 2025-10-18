@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-18 17:13:45.370905",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "member_gender",
+  "member_age",
+  "relationship_to_child",
+  "if_others_please_specify",
+  "column_break_htwn",
+  "marital_status",
+  "occupation",
+  "is_alive",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member's Name"
+  },
+  {
+   "fieldname": "member_gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Members Gender",
+   "options": "\nMale\nFemale\nOthers"
+  },
+  {
+   "fieldname": "member_age",
+   "fieldtype": "Int",
+   "label": "Members  Age"
+  },
+  {
+   "fieldname": "relationship_to_child",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Relationship to Child",
+   "options": "\nFather\nMother\nGuardian\nGrandfather\nGrandmother\nUncle\nAunt\nBrother\nSister\nCousin\nNephew\nNiece\nFoster Parent\nAdoptive Parent\nCaretaker\nOther"
+  },
+  {
+   "depends_on": "eval:doc.relationship_to_child==\"Other\";",
+   "fieldname": "if_others_please_specify",
+   "fieldtype": "Data",
+   "label": "If others please specify",
+   "mandatory_depends_on": "doc.relationship_to_child==\"Other\";"
+  },
+  {
+   "fieldname": "column_break_htwn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "\nSingle\nMarried\nWidowed\nDivorced"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Select",
+   "label": "Occupation",
+   "options": "\nStudent\nUnemployed\nDaily Wage Labourer\nMason / Construction Worker\nCarpenter\nElectrician\nPlumber\nMechanic\nTailor\nDriver / Auto Driver\nFarmer\nShopkeeper / Vendor\nSelf-employed\nBusiness Owner\nDelivery Person\nHousekeeping Staff"
+  },
+  {
+   "fieldname": "is_alive",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Is Alive",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-10-18 17:13:45.370905",
+ "modified_by": "Administrator",
+ "module": "Childcare MIS Child",
+ "name": "Child Family Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "format:CED{####}",
+ "creation": "2025-10-18 17:36:48.225849",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "child_id",
+  "child_name",
+  "age",
+  "gender",
+  "column_break_lpag",
+  "cci_id",
+  "cci_name",
+  "organization",
+  "child_education_details_section",
+  "academic_year",
+  "current_class",
+  "school_type",
+  "school__institution_name",
+  "column_break_fjtw",
+  "medium_of_instruction",
+  "board_of_education",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "child_id",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Child ID",
+   "link_filters": "[[\"Child profile\",\"child_status\",\"=\",\"Present\"]]",
+   "options": "Child profile",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "child_id.child_name",
+   "fieldname": "child_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Child Name"
+  },
+  {
+   "fetch_from": "child_id.age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Age"
+  },
+  {
+   "fetch_from": "child_id.gender",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gender"
+  },
+  {
+   "fieldname": "column_break_lpag",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "child_id.cci_id",
+   "fetch_if_empty": 1,
+   "fieldname": "cci_id",
+   "fieldtype": "Link",
+   "label": "CCI ID",
+   "options": "CCI Profile"
+  },
+  {
+   "fetch_from": "child_id.cci_name",
+   "fetch_if_empty": 1,
+   "fieldname": "cci_name",
+   "fieldtype": "Data",
+   "label": "CCI Name"
+  },
+  {
+   "fetch_from": "child_id.organization",
+   "fetch_if_empty": 1,
+   "fieldname": "organization",
+   "fieldtype": "Data",
+   "label": "Organization name"
+  },
+  {
+   "fieldname": "child_education_details_section",
+   "fieldtype": "Section Break",
+   "label": "Child Education Details"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "current_class",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Current Class",
+   "options": "\nPre-KG\nLKG (Lower Kindergarten)\nUKG (Upper Kindergarten)\n1st Standard\n2nd Standard\n3rd Standard\n4th Standard\n5th Standard\n6th Standard\n7th Standard\n8th Standard\n9th Standard\n10th Standard (SSLC)\n11th Standard (HSC 1st Year)\n12th Standard (HSC 2nd Year)\nDropped Out\nNot Yet Enrolled\nCompleted Schooling",
+   "reqd": 1
+  },
+  {
+   "fieldname": "school_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "School Type",
+   "options": "\nGovernment\nGovernment-Aided\nPrivate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "school__institution_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "School / Institution Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fjtw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "medium_of_instruction",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Medium of Instruction",
+   "options": "\nTamil\nEnglish\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "board_of_education",
+   "fieldtype": "Select",
+   "label": "Board of Education",
+   "options": "\nState Board\nCBSE\nICSE\nMatric\nOthers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-18 17:36:48.225849",
+ "modified_by": "Administrator",
+ "module": "Childcare MIS",
+ "name": "Child Education Details",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "child_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
